@@ -1,0 +1,23 @@
+[alias]
+  aa = add -A # this will stage everything regardless of current folder.
+  amend = commit --amend --reset-author --reuse-message=HEAD #when amending, also change the author to match the ammender
+  rc = rebase --continue
+  ra = rebase --abort
+  pf = push --force-with-lease
+  pr = pull --rebase
+  br = branch
+  ci = commit -m
+  clear = !git add . && git stash && git stash drop #put all new work in a stash and drop the stash. Useful and dangerous
+  co = checkout
+  ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore #if no gitignore, make one, then echo a string to the file
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative #show pretty subway
+  merged = branch --merged
+  oneline = log --oneline #shows a flattened subway
+  p = pair #some asy teams use additional dotfiles that allow multiple git authors for pairing
+  patch = log -p --no-walk # Generate patch file from a commit.
+  prune = remote prune # delete local branches that have been deleted from remote
+  search = log --pretty=short -S #provide a branch name, find commits from that branch
+  st = status
+  staged = diff --staged #diff against what is currently staged
+  current-branch = rev-parse --abbrev-ref HEAD #prints the current branch
+  rhu = "!git reset --hard origin/$(git current-branch)" #Revert all changes on your current branch (including commits) to the origin version of the branch. Helpful for when someone has rebase a branch and you just want to take the new version
