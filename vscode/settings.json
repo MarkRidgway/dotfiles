@@ -4,7 +4,7 @@
   "editor.minimap.enabled": false,
   "explorer.openEditors.visible": 0,
   "editor.fontFamily": "'MesloLGS NF', monospace",
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.lineHeight": 0,
   "editor.fontWeight": "400",
   "editor.letterSpacing": 0.5,
@@ -12,14 +12,10 @@
   "editor.fontLigatures": true,
   "files.trimTrailingWhitespace": true,
   "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 13,
   "window.newWindowDimensions": "maximized",
-  "terminal.integrated.rendererType": "dom",
   "typescript.updateImportsOnFileMove.enabled": "never",
   "emmet.includeLanguages": {
     "javascript": "javascriptReact"
@@ -48,17 +44,23 @@
   "breadcrumbs.enabled": true,
   "explorer.confirmDelete": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Jingle (rainglow)",
+  "workbench.colorTheme": "Blink (rainglow)",
   "debug.console.fontSize": 16,
   "markdown.preview.fontSize": 16,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // "editor.defaultFormatter": "SimonSiefke.prettier-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   // "prettier.requireConfig": true,
-  // "editor.formatOnSave": true,
-  // "eslint.alwaysShowStatus": true,
-  // "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[mdx]": {
     "editor.formatOnSave": false
@@ -81,5 +83,5 @@
   ],
   "workbench.editor.untitled.hint": "hidden",
   "security.workspace.trust.untrustedFiles": "open",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1
 }
